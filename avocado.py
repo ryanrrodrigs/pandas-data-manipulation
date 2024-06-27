@@ -16,5 +16,8 @@ nb_sold_by_date = nb_sold_by_size = avocados.groupby("date")["nb_sold"].sum()
 # Create a line plot of the number of avocados sold by date
 nb_sold_by_date.plot(kind="line")
 
+# Scatter plot of avg_price vs. nb_sold with title
+avocados.plot(x="nb_sold", y="avg_price", kind="scatter", title="Number of avocados sold vs. average price")
+
 # Show the plot
 plt.show()
