@@ -10,5 +10,11 @@ nb_sold_by_size = avocados.groupby("size")["nb_sold"].sum()
 # Create a bar plot of the number of avocados sold by size
 nb_sold_by_size.plot(kind="bar")
 
+# Get the total number of avocados sold on each date
+nb_sold_by_date = nb_sold_by_size = avocados.groupby("date")["nb_sold"].sum()
+
+# Create a line plot of the number of avocados sold by date
+nb_sold_by_date.plot(kind="line")
+
 # Show the plot
 plt.show()
